@@ -1,2 +1,62 @@
 
 /* Your CSS Code here. */
+.cube {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate-cube 20s infinite linear;
+    margin-left: 600px;
+    margin-top: 200px;
+  }
+
+  .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    box-sizing: border-box;
+  }
+
+  .front {
+    transform: rotateY(0deg) translateZ(100px);
+    background: #ff0000;
+    border: 2px solid #000000;
+  }
+
+  .back {
+    transform: rotateY(180deg) translateZ(100px);
+    background: #00ff00;
+    border: 2px solid #000000;
+  }
+
+  .right {
+    transform: rotateY(90deg) translateZ(100px);
+    background: #0000ff;
+    border: 2px solid #000000;
+  }
+
+  .left {
+    transform: rotateY(-90deg) translateZ(100px);
+    background: #ffff00;
+    border: 2px solid #000000;
+  }
+
+  .top {
+    transform: rotateX(90deg) translateZ(100px);
+    background: #ff00ff;
+    border: 2px solid #000000;
+  }
+
+  .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+    background: #00ffff;
+    border: 2px solid #000000;
+  }
+
+  @keyframes rotate-cube {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+  }
